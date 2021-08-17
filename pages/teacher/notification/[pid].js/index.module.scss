@@ -1,0 +1,11 @@
+.post-detail-cover {
+	img {
+		height: 350px;
+	}
+}
+
+.content-blog {
+	@media screen and (min-width: 992px) {
+		min-height: calc(var(--app-height) - (85px + 50px + 350px));
+	}
+}

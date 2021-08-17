@@ -1,0 +1,116 @@
+// OFFICIAL STYLE
+
+button {
+	&:focus {
+		outline: none;
+	}
+}
+
+.study {
+	display: flex;
+	justify-content: space-between;
+
+	@media screen and (max-width: 992px) {
+		flex-direction: column;
+	}
+
+	// Study Main
+
+	.study__main {
+		width: calc(100% - 430px);
+		position: relative;
+		z-index: 1;
+
+		@media screen and (max-width: 991px) {
+			margin-top: 30px;
+			width: 100%;
+			order: 2;
+		}
+
+		.btn-toggle {
+			position: absolute;
+			right: 19px;
+			border: none;
+			border-radius: 50%;
+			width: 37px;
+			height: 37px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: 0.3s;
+			&:hover {
+				background: #e71b64;
+				transition: 0.3s;
+
+				svg {
+					color: white;
+				}
+			}
+
+			svg {
+				font-size: 22px;
+			}
+		}
+
+		&.active {
+			width: 100%;
+			transition: width 0.5s;
+		}
+		&.non-active {
+			width: calc(100% - 430px);
+			transition: width 0.5s;
+			@media screen and (max-width: 991px) {
+				width: 100%;
+			}
+		}
+
+		.study__main--header {
+			background-color: white;
+
+			.course {
+				height: 50px;
+				padding: 0 20px;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				border-bottom: 1px solid #00000026;
+
+				@media screen and (max-width: 991px) {
+					display: none;
+				}
+
+				.course__box {
+					background: #e71b64;
+					color: white;
+					padding: 2px 12px;
+					border-radius: 999px;
+					margin-right: 15px;
+					display: flex;
+					align-items: center;
+
+					svg {
+						margin-right: 5px;
+					}
+				}
+
+				.course__title {
+					&--text {
+						margin-bottom: 0;
+						color: #696969;
+					}
+				}
+			}
+		}
+	}
+}
+
+// .box-video {
+// 	margin-bottom: 15px;
+// 	width: 60%;
+// 	height: 400px;
+// 	margin: auto;
+// 	.video-js {
+// 		width: 100%;
+// 		height: 100%;
+// 	}
+// }

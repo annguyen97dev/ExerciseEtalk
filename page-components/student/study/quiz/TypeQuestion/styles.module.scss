@@ -1,0 +1,22 @@
+.quiz-input {
+	width: 150px;
+	display: inline-block;
+	margin: 0 5px;
+	padding: 0 5px;
+	border: 1px solid #b7b7b7;
+	// background: #f5f5f5;
+	background: white;
+	&:focus {
+		outline: 2px solid #8c8c8c40;
+	}
+	&.auto {
+		width: auto;
+	}
+	&.active-type-input {
+		background: #f5f5f5;
+	}
+}
+
+// textarea {
+// 	resize: none;
+// }

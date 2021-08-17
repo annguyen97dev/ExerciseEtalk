@@ -1,0 +1,46 @@
+.box-include {
+	background-color: white;
+	border: 1px solid #a9a9a9;
+	width: 200px;
+	height: 25px;
+	margin-left: 10px;
+
+	div {
+		padding: 0 3px;
+		height: 100%;
+	}
+}
+.quiz-drop {
+	.listAnswer {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		p {
+			margin-bottom: 10px;
+			padding: 3px 10px;
+			background: rgb(253, 253, 253);
+			box-shadow: #bbbbbb 0px 1px 3px;
+			line-height: initial;
+			background: #efefef;
+		}
+	}
+}
+
+.wrap-text {
+	display: flex;
+	justify-content: flex-start;
+	margin-bottom: 10px;
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.active-question {
+	background: #f500571c !important;
+}
+.active-text {
+	height: auto !important;
+}
+.active-box {
+	background: #efefef;
+}

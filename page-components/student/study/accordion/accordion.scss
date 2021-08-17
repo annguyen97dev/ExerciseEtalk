@@ -1,0 +1,166 @@
+.sidebar-section {
+	&__header {
+		padding: 12px 15px;
+		background: #f3f3f3;
+
+		.title {
+			font-size: 1.1em;
+			font-weight: bold;
+			margin-bottom: 0;
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.info {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
+
+/* Style the accordion section */
+.accordion__section {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+	background-color: #f9f9f9;
+	color: #444;
+	cursor: pointer;
+	padding: 12px 15px;
+	display: flex;
+	align-items: center;
+	border: none;
+	border-bottom: 1px solid #00000026;
+	outline: none;
+	transition: background-color 0.6s ease;
+
+	&:focus {
+		border-bottom: 1px solid #00000026;
+	}
+}
+
+.accordion-title {
+	width: 95%;
+	text-align: left;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.accordion:hover,
+.accordion.active {
+	background-color: #f3f3f3a8;
+}
+
+/* Style the accordion content title */
+.accordion__title {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	color: black;
+}
+
+/* Style the accordion chevron icon */
+.accordion__icon {
+	margin-left: auto;
+	transition: transform 0.6s ease;
+}
+
+/* Style to rotate icon when state is active */
+.rotate {
+	transform: rotate(90deg);
+}
+
+/* Style the accordion content panel. Note: hidden by default */
+.accordion__content {
+	background-color: white;
+	overflow: hidden;
+	transition: max-height 0.6s ease;
+}
+
+/* Style the accordion content text */
+.accordion__text {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+.accordion-box {
+	display: flex;
+	justify-content: flex-start;
+	padding: 12px 15px;
+	border-bottom: 1px solid #d8d8d8;
+
+	&.active {
+		background: #e71b640d;
+	}
+
+	.topic {
+		.topic-title {
+			font-size: 1.1em;
+			font-weight: 500;
+			color: #272727;
+			margin-bottom: 0;
+
+			a:hover {
+				color: #e71b64;
+				text-decoration: underline;
+			}
+		}
+
+		.topic-list {
+			opacity: 0.5;
+			font-size: 1em;
+			font-weight: 600;
+			margin-bottom: 0;
+			li {
+				display: inline-block;
+				list-style: none;
+				font-weight: bold;
+				opacity: 0.3;
+				i {
+					display: inline;
+					vertical-align: middle;
+					margin-right: 5px;
+				}
+			}
+			li + li:before {
+				content: '|';
+				padding-right: 6px;
+				padding-left: 3px;
+			}
+		}
+	}
+}
+.style-checkbox {
+	margin-right: 10px;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background: transparent;
+	cursor: pointer;
+	transition: 0.3s;
+
+	&:hover {
+		background: #f1f1f1;
+		transition: 0.3s;
+	}
+
+	input[type='checkbox'] {
+		width: 17px;
+		height: 17px;
+		border: 2px solid #212121;
+
+		&:checked {
+			background: #e71b64;
+			background-color: #e71b64;
+		}
+	}
+}

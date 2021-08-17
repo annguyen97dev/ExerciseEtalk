@@ -1,0 +1,140 @@
+// DCM tức quá tự code cho rồi
+.highlight-text {
+	background-color: yellow;
+}
+// .highlight {
+// 	height: 500px;
+// 	overflow: auto;
+// }
+.popover-style {
+	display: none;
+	position: fixed;
+	z-index: 999;
+	// width: 100px;
+	// height: fit-content;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 100%;
+		left: 60%;
+		transform: translateX(-50%);
+		width: 0;
+		height: 0;
+		border-left: 7px solid transparent;
+		border-right: 7px solid transparent;
+		border-top: 7px solid white;
+		z-index: 0;
+	}
+
+	&__button {
+		display: flex;
+		justify-content: space-between;
+		box-shadow: 1px 2px 10px #0000004f;
+		border-radius: 4px;
+
+		button {
+			background: white;
+			border: none;
+			padding: 3px 12px;
+			font-size: 14px;
+			font-weight: bold;
+			cursor: pointer;
+			transition: 0.3s;
+
+			&.highlight {
+				border-right: 1px solid #d4d4d4;
+			}
+
+			&:hover {
+				background: #f3f3f3;
+				transition: 0.3s;
+			}
+			&:focus {
+				border: none;
+				outline: none;
+			}
+		}
+	}
+}
+
+// POPUP NOTE
+.wrap-popup-note {
+	display: none;
+}
+.popup-note {
+	position: fixed;
+	display: flex;
+	width: 250px;
+	height: 280px;
+	flex-direction: column;
+	justify-content: flex-start;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	&-header {
+		padding: 12px;
+		width: 100%;
+		background: #e71b64;
+		position: relative;
+
+		.close-popup {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 0;
+			cursor: pointer;
+			padding: 0 10px;
+			border: none;
+			outline: 0;
+			background: transparent;
+
+			svg {
+				color: white;
+			}
+		}
+	}
+
+	&-content {
+		width: 100%;
+		height: 100%;
+		textarea {
+			width: 100%;
+			height: 100%;
+			border: none;
+			outline: none;
+			resize: none;
+			padding: 0 5px;
+
+			&:focus {
+				border: none;
+				outline: none;
+			}
+		}
+	}
+}
+
+.popover-hover {
+	&::after {
+		content: '';
+		position: absolute;
+		top: 70%;
+		left: 10%;
+		// transform: translateX(-50%);
+		width: 0;
+		height: 0;
+		border-left: 7px solid transparent;
+		border-right: 7px solid transparent;
+		border-top: 7px solid white;
+	}
+}
+
+.noSelect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}

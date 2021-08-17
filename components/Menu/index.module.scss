@@ -1,0 +1,12 @@
+@import '../../styles/variable';
+
+.aside-logo {
+	img {
+		filter: brightness(100);
+		max-width: 100px;
+	}
+}
+
+.aside-auto {
+	width: auto !important;
+}

@@ -1,0 +1,92 @@
+// Study Sidebar
+
+.study__sidebar {
+	width: 430px;
+	background-color: white;
+	border-left: 1px solid #00000026;
+	overflow: auto;
+
+	&.active-close {
+		transition: 0.5s linear 0s;
+		transform: translateX(430px);
+	}
+	/* width */
+	&::-webkit-scrollbar {
+		width: 8px;
+	}
+
+	/* Track */
+	&::-webkit-scrollbar-track {
+		background: #f1f1f1;
+	}
+
+	/* Handle */
+	&::-webkit-scrollbar-thumb {
+		background: #ffc5da;
+	}
+
+	/* Handle on hover */
+	&::-webkit-scrollbar-thumb:hover {
+		background: #555;
+	}
+
+	.study__sidebar--header {
+		height: 50px;
+		padding: 0 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid #00000026;
+
+		.btn-toggle {
+			border: none;
+			border-radius: 50%;
+			width: 37px;
+			height: 37px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: 0.3s;
+			&:hover {
+				background: #e71b64;
+				transition: 0.3s;
+
+				svg {
+					color: white;
+				}
+			}
+
+			svg {
+				font-size: 22px;
+			}
+		}
+
+		.status {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+
+			span {
+				font-size: 17px;
+				background: #e71b6429;
+				padding: 2px 10px;
+			}
+
+			.status-info {
+				p {
+					margin-bottom: 0;
+					margin-left: 15px;
+					color: #e71b64;
+					font-weight: bold;
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.study__sidebar {
+		display: none;
+	}
+}
