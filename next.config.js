@@ -7,6 +7,7 @@ const localeSubpaths = {
 	vi: 'vi',
 	en: 'en',
 };
+
 module.exports = withOffline(
 	withCSS(
 		withSass(

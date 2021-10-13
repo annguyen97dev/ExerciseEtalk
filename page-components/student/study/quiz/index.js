@@ -377,9 +377,8 @@ const Quiz = ({ dataLesson }) => {
 						dataNote.forEach((item, index, arr) => {
 							nodesArr.forEach((node, ind) => {
 								if (item.id === node.id) {
-									document.getElementById(
-										item.id,
-									).outerHTML = document.getElementById(item.id).innerHTML;
+									document.getElementById(item.id).outerHTML =
+										document.getElementById(item.id).innerHTML;
 								}
 							});
 						});
@@ -1132,9 +1131,8 @@ const Quiz = ({ dataLesson }) => {
 							}
 						});
 
-						document.getElementById(id).outerHTML = document.getElementById(
-							id,
-						).innerHTML;
+						document.getElementById(id).outerHTML =
+							document.getElementById(id).innerHTML;
 						$(this).parent().parent().hide();
 					});
 
@@ -1180,9 +1178,8 @@ const Quiz = ({ dataLesson }) => {
 					pos4 = 0;
 				if (document.getElementById(elmnt.id + 'header')) {
 					// if present, the header is where you move the DIV from:
-					document.getElementById(
-						elmnt.id + 'header',
-					).onmousedown = dragMouseDown;
+					document.getElementById(elmnt.id + 'header').onmousedown =
+						dragMouseDown;
 				} else {
 					// otherwise, move the DIV from anywhere inside the DIV:
 					elmnt.onmousedown = dragMouseDown;
@@ -1694,19 +1691,6 @@ const Quiz = ({ dataLesson }) => {
 											),
 										),
 									)}
-
-									{/* <li className="item activeDoing" value="0">
-										<span>1</span>
-									</li>
-									<li className="item" value="1">
-										<span>2</span>
-									</li>
-									<li className="item" value="2">
-										<span>3</span>
-									</li>
-									<li className="item" value="3">
-										<span>4</span>
-									</li> */}
 								</ul>
 								<span className="pagi-btn next">
 									<ChevronRightIcon />

@@ -42,6 +42,7 @@
 		"next-i18next": "^7.0.1",
 		"next-offline": "^5.0.3",
 		"next-transpile-modules": "^4.1.0",
+		"node-sass": "^6.0.1",
 		"nprogress": "^0.2.0",
 		"react": "^17.0.1",
 		"react-axe": "^3.4.1",
@@ -69,7 +70,7 @@
 		"yup": "^0.29.3"
 	},
 	"scripts": {
-		"dev": "next",
+		"dev": "next dev -p 3001",
 		"start": "next start -p $PORT",
 		"lint": "eslint components",
 		"build": "next build",
@@ -96,7 +97,7 @@
 		"html-webpack-plugin": "^5.3.1",
 		"prettier": "^2.1.2",
 		"random-avatar-generator": "^2.0.0",
-		"sass": "^1.35.1",
+		"sass": "^1.42.1",
 		"serve": "^11.3.2",
 		"webpack-cli": "^4.6.0",
 		"webpack-dev-middleware": "^4.1.0",
