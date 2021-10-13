@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-// import './styles.scss';
+import './styles.modules.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ItemNote from './ItemNote';
 import FormNote from './FormNote';
